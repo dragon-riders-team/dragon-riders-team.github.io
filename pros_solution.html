@@ -1,0 +1,60 @@
+---
+layout: null
+section-type: pros_solution
+title: Pros of proposed solution
+---
+## Pros of proposed solution
+- portability across machines - Docker containers can be built and tested locally on dev/test server and final images can be then deployed to Notary Nodes and then started.
+- version control
+- sharing images - operators can build an image once, share, and then everybody can deploy that same image on their own servers
+- minimal overhead
+- high availability - in case of failure, in a multi-node setup, containers can be started on another node of the same cluster
+- scalability - new nodes can be added to the cluster to expand its capacity
+
+<!--
+My proposal is based around Notary nodes improvements. Currently in order to run notary node,
+physical server is needed with a lot of disk space and RAM. Standard servers allow you to scale only 
+vertically, which means adding RAM modules or disks. With increasing number of assetchains, single server might be not sufficient to handle the load.
+What about if we split the load between multiple servers? By cutting Komodo/Iguana/Bitcoin/assetchains 
+into smaller pieces (containers), we could run each piece of the puzzle ditributed accross multiple nodes.
+
+### Current work
+I already started with dockerizing Komodo platform. You can check my progress here:
+
+<iframe src="https://ghbtns.com/github-btn.html?user=patchkez&repo=kmdplatform&count=false&size=large" frameborder="0" scrolling="0" align="middle" width="45px" height="50px"></iframe>
+
+- dockerize Bitcoin/Komodo/Iguana combo to make the deployment frictionless
+- decouple NN software from baremetal and deploy it into Openshift/Kubernetes
+- have central docker registry with signed images
+
+### Pros of proposed solution
+- portability across machines - Docker containers can be build and tested locally on dev/test server and final images can be then deployed to Notary Node and started.
+- version control
+- sharing images - operators can build the image once and all can deploy the same to their prod servers
+- minimal overhead
+- high availability - in multi-node setup, containers can be started on another node in the cluster in case of failure
+- scalability - new nodes can be added to the cluster to expand the capacity
+-->
+<!--
+{: style="text-align: left;"}
+Github's Octocat was designed by Simon Oxley, alongside the white bird Twitter used (before they received a proper logo) as part of a usual routine of cranking out images for iStock. GitHub saw it, and wanted it, presumably under the notion that it can represent how complex code combines to create peculiar things, much like the octopuss... except the CEO of GitHub called it an octocat, and it has been the octocat since <a href="https://www.quora.com/GitHub/What-is-the-story-behind-GitHub%E2%80%99s-octocat-mascot" target="_blank">[via]</a>.
+
+<small>
+Octocat is Github's logo and trademark and here is used to illustrate a fictional character (John Smith) that used the *{ Personal }* Jekyll Theme to build his website.
+</small>
+
+<table align="right">
+  <tr><th align="center">Header A</th><th align="center">Header B</th><th align="center">Header C</th></tr>
+  <tr><td>Content a1</td><td>Content b1</td><td>Content c1</td></tr>
+  <tr><td>Content a2</td><td>Content b2</td><td>Content c2</td></tr>
+  <tr><td>Content a3</td><td>Content b3</td><td>Content c3</td></tr>
+</table>
+  
+
+Support the repo by starring or forking it!
+
+<iframe src="https://ghbtns.com/github-btn.html?user=le4ker&repo=personal-jekyll-theme&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+
+<iframe src="https://ghbtns.com/github-btn.html?user=le4ker&repo=personal-jekyll-theme&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+
+-->
