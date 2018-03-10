@@ -1,20 +1,36 @@
----
-layout: null
-section-type: pros_solution
-title: Pros of proposed solution
----
-## Pros of proposed solution
-**Portability Across Machines** --- Docker containers can be built and tested locally on dev/test server and final images can be then deployed to Notary Nodes and then started.
+## What we will provide to the Komodo community
 
-**Version Control**
+Our proposal is based on Notary Node architecture improvements. 
 
-**Sharing Images** --- operators can build an image once, share, and then everybody can deploy that same image on their own servers
+Currently in order to run a notary node, a physical server is needed, with a lot of disk space and RAM. Standard servers allow you to scale only vertically, which means adding RAM modules or disks. With the increasing number of assetchains, a single server might not be sufficient to handle the load. 
 
-**Minimal Overhead**
+But, what if we split the load between multiple servers? By cutting Komodo/Iguana/Bitcoin/assetchains down into smaller pieces (containers), we could run each piece of the puzzle in a ditributed manner accross multiple nodes.
 
-**High Availability** --- in case of failure, in a multi-node setup, containers can be started on another node of the same cluster
+<!--
+### Current work
+We already started with dockerizing Komodo platform.
 
-**Scalability** --- new nodes can be added to the cluster to expand its capacity
+- dockerizing Bitcoin/Komodo/Iguana combo to make the deployment frictionless
+- decoupling of Notary Node software from baremetal and deployment onto Openshift/Kubernetes
+- having a central Docker registry with signed images
+- management scripts will need to be rewritten because they were designed to work on single machine
+
+You can check our progress here:
+
+
+<iframe src="https://ghbtns.com/github-btn.html?user=patchkez&repo=kmdplatform&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="60px"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=Emmanux&repo=kmdplatform&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="60px"></iframe>
+
+At some point, we will merge our changes into one repo.
+
+### Pros of proposed solution
+- portability across machines - Docker containers can be built and tested locally on dev/test server and final images can be then deployed to Notary Nodes and then started.
+- version control
+- sharing images - operators can build an image once, share, and then everybody can deploy that same image on their own servers
+- minimal overhead
+- high availability - in case of failure, in a multi-node setup, containers can be started on another node of the same cluster
+- scalability - new nodes can be added to the cluster to expand its capacity
+-->
 
 <!--
 My proposal is based around Notary nodes improvements. Currently in order to run notary node,
