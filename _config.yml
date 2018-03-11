@@ -30,7 +30,7 @@ force-https: True
 #############
 
 lang: "en"
-author: "patchkez, komodo.rocks"
+author: "patchkez, emmanux"
 title: "{ DRAGON RIDERS }"
 description: "Dragon Riders - Notary Node DevOps"
 keywords: "komodo, dragon riders, notary node, dpow, bitcoin"
