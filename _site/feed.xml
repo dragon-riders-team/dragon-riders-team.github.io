@@ -3,8 +3,8 @@
 	<channel>
 		<title>{ DRAGON RIDERS }</title>
 		<description>Dragon Riders - Notary Node DevOps</description>
-		<link>http://0.0.0.0:4000</link>
-		<atom:link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/rss+xml" />
+		<link>https://dragon-riders-team.github.io</link>
+		<atom:link href="https://dragon-riders-team.github.io/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
 				<title>Proposed Notary Node architecture by Dragon Riders team</title>
@@ -15,8 +15,8 @@
 </description>
 				
 				<pubDate>Tue, 20 Mar 2018 00:00:00 -0500</pubDate>
-				<link>http://0.0.0.0:4000/tech/2018/03/20/proposed-notary-node-architecture.html</link>
-				<guid isPermaLink="true">http://0.0.0.0:4000/tech/2018/03/20/proposed-notary-node-architecture.html</guid>
+				<link>https://dragon-riders-team.github.io/tech/2018/03/20/proposed-notary-node-architecture.html</link>
+				<guid isPermaLink="true">https://dragon-riders-team.github.io/tech/2018/03/20/proposed-notary-node-architecture.html</guid>
 			</item>
 		
 	</channel>
