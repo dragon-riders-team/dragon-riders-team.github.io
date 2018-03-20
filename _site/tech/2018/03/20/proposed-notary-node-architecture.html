@@ -222,7 +222,7 @@
           </h4>
 
           <section class="text-justify">
-            <p>Komodo elections are in progress and probably every holder is reading Notary Node candidate <a href="https://github.com/KomodoPlatform/vote2018" target="_blank">proposals</a>. Many proposals offer some kind of revenue share which they handout when they get enough votes and win. We at DragonRiders team would like to offer something different to the Komodo community. We are two IT professionals – <a href="https://patchkez.github.io" target="_blank">patchkez</a>  and <a href="https://github.com/Emmanux" target="_blank">emmanux</a>  – who want to invest in Komodo Platform by solving every existing scaling issue and adopting innovative technologies and practices from DevOps culture. We already have a concept of how the future architecture of Notary nodes might look like. Here we try to share a few words about current Notary Nodes architecture, possible future bottlenecks and how to solve these problems.</p>
+            <p>Komodo elections are in progress and probably every holder is reading Notary Node candidate <a href="https://github.com/KomodoPlatform/vote2018" target="_blank">proposals</a>. Many proposals offer some kind of revenue share which they handout when they get enough votes and win. We at DragonRiders team would like to offer something different to the Komodo community. We are two IT professionals – <a href="https://patchkez.github.io" target="_blank">patchkez</a>  and <a href="https://steemit.com/bitcoin/@emmanux/proposal-for-the-notary-nodes-elections-2018" target="_blank">emmanux</a>  – who want to invest in Komodo Platform by solving every existing scaling issue and adopting innovative technologies and practices from DevOps culture. We already have a concept of how the future architecture of Notary nodes might look like. Here we try to share a few words about current Notary Nodes architecture, possible future bottlenecks and how to solve these problems.</p>
 
 <h2 id="overview-of-current-architecture">Overview of current architecture</h2>
 <p>Current Notary Nodes architecture consists of 64 physical servers located in different regions. Each server runs 3 main components – <a href="https://bitcoin.org/en/bitcoin-core/" target="_blank">Bitcoin Core</a>, <a href="https://github.com/jl777/komodo" target="_blank">Komodod</a> and <a href="https://github.com/jl777/SuperNET" target="_blank">Iguana</a> services. Besides these processes, many assetchains run in parallel, with their own blockchains.  The current production setup allows communication between these services on a single machine, via “port numbers”.
@@ -236,7 +236,7 @@ Because of all the communications is happening over API (Application Programming
 With such seggregation, it is possible to place microservices on different nodes/servers where communication with other services is done through API via a “shared cluster network”. Bitcoin, Komodo and Iguana services already talk to each other via API, we only need to extend their capability so they can run on multiple nodes.
 Here is a simple architecture diagram on how scalable Komodo Platform running on top of Kubernetes/Openshift cluster might look like:</p>
 
-<p><img src="https://dragon-riders-team.github.io/img/new_komodo_platform4.png" alt="My helpful screenshot" /></p>
+<p><img src="http://0.0.0.0:4000/img/new_komodo_platform4.png" alt="My helpful screenshot" /></p>
 
 <p>In order to interconnect, deploy and manage microservices (containers) we need to choose production ready platform. Kubernetes/Openshift to the rescue!</p>
 
@@ -369,7 +369,7 @@ $(window).scroll(toggleNavCollapse);$(function(){$("a.page-scroll").bind("click"
 <script>
 function addTohistory() {
   if (!window.location.host.startsWith("127.0.0.1")) {
-    history.pushState({}, 'Proposed Notary Node architecture by Dragon Riders team', 'https://dragon-riders-team.github.io/tech/2018/03/20/proposed-notary-node-architecture.html');
+    history.pushState({}, 'Proposed Notary Node architecture by Dragon Riders team', 'http://0.0.0.0:4000/tech/2018/03/20/proposed-notary-node-architecture.html');
   }
 }
 </script>
