@@ -118,16 +118,16 @@ post-preview-words: 96
 
 paginate: 5
 
-email-share: True
-fb-share: True
-twitter-share: True
-linkedin-share: True
-reddit-share: True
-google-plus-share: True
-tumblr-share: True
-pinterest-share: True
-pocket-share: True
-vkontakte-share: True
+# email-share: True
+# fb-share: True
+# twitter-share: True
+# linkedin-share: True
+# reddit-share: True
+# google-plus-share: True
+# tumblr-share: True
+# pinterest-share: True
+# pocket-share: True
+# vkontakte-share: True
 
 #disqus-shortname: "panossakkos"
 
@@ -211,7 +211,7 @@ pages_list:
   Work: 'current_work'
   Solution: 'pros_solution'
   # Hardware: 'hardware'
-#  Blog: 'latest-post'
+  Blog: 'latest-post'
 #  Timeline: 'timeline'
   Vote: 'vote'
   # Contact: 'contact'
