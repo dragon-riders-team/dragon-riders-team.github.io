@@ -1,0 +1,449 @@
+
+<!-- Post Layout Start -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+  
+<!-- HEAD Start -->
+
+<head>
+  
+
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Dragon Riders - Notary Node DevOps">
+  <meta name="author" content="patchkez, emmanux">
+  <meta name="keywords" content="komodo, dragon riders, notary node, dpow, bitcoin">
+  <link rel="canonical" href="/tech/2018/03/20/proposed-notary-node-architecture.html">
+  <title>{ DRAGON RIDERS } | Proposed Notary Node architectyre by Dragon Riders team</title>
+
+  <!-- Bootstrap Core CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+  <!-- Custom CSS -->
+  <link href="/css/grayscale.css" rel="stylesheet">
+  
+
+  <!-- Custom Fonts -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/rrssb.css" />
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  
+    <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico">
+  
+
+  
+
+  
+
+
+  <!-- iOS Web App mode -->
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="apple-touch-icon" sizes="36x36" href="/img/web-app/icon-36p.png">
+  <link rel="apple-touch-icon" sizes="48x48" href="/img/web-app/icon-48p.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/img/web-app/icon-72p.png">
+  <link rel="apple-touch-icon" sizes="96x96" href="/img/web-app/icon-96p.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/img/web-app/icon-144p.png">
+  <link rel="apple-touch-icon" sizes="192x192" href="/img/web-app/icon-192p.png">
+
+  <!-- Android Web App mode -->
+
+  <link rel="manifest" href="/manifest.json">
+
+
+
+
+  
+<!-- Chrome, Firefox OS and Opera -->
+<meta name="theme-color" content="#000000">
+<!-- Windows Phone -->
+<meta name="msapplication-navbutton-color" content="#000000">
+<!-- iOS Safari -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+
+  
+
+
+  <!-- Syntax highlight in post pages -->
+
+  <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/styles/monokai_sublime.min.css">
+
+
+
+
+</head>
+
+<!-- HEAD End -->
+
+
+  <body>
+
+    
+<!-- Navigation Start -->
+
+<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+        <i class="fa fa-bars"></i>
+      </button>
+      
+        <a class="navbar-brand" href="/">
+      
+          <div>
+            
+              <img src="/img/black-lab-glass.ico" alt="">
+            
+            { DRAGON RIDERS }
+          </div>
+        </a>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+      <ul class="nav navbar-nav">
+        
+          <!-- Blog, Post, Tag and Error pages -->
+          
+            <li>
+            
+                <a href="/#about"> About </a>
+            
+            </li>
+          
+            <li>
+            
+                <a href="/#community"> Community </a>
+            
+            </li>
+          
+            <li>
+            
+                <a href="/#current_work"> Work </a>
+            
+            </li>
+          
+            <li>
+            
+                <a href="/#pros_solution"> Solution </a>
+            
+            </li>
+          
+            <li>
+            
+              
+                <a href="/blog/"> Blog </a>
+              
+            
+            </li>
+          
+            <li>
+            
+                <a href="/#vote"> Vote </a>
+            
+            </li>
+          
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Navigation End -->
+
+
+    <section id="post" class="container content-section text-center">
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+
+          
+<!-- Swipe Instructions Start -->
+
+<div id="swipe-instruction">
+  <div>
+    <p><br><br><br></p>
+    <i id="hand-swipe" class="fa fa-hand-o-up"></i>
+    <p><strong>
+    
+      Did you know that you can navigate the posts by swiping left and right?
+    
+    </strong></p>
+    <button type="button" class="btn btn-default ok-btn close-swipe-instruction">
+      
+        Awesome!
+      
+    </button>
+  </div>
+</div>
+
+<!-- Swipe Instructions End -->
+
+
+          <h1><strong>Proposed Notary Node architectyre by Dragon Riders team</strong></h1>
+          <h4>
+            <strong>20 Mar 2018</strong>
+            <small>
+              . category:
+              <a class="category" href="/categories/tech.html">
+                tech
+              </a><!--.
+              <a href="/tech/2018/03/20/proposed-notary-node-architecture.html#disqus_thread">Comments</a> -->
+              <br />
+              
+                <a class="tag" href="/tags/bitcoin.html">#bitcoin</a>
+              
+                <a class="tag" href="/tags/komodo.html">#komodo</a>
+              
+                <a class="tag" href="/tags/iguana.html">#iguana</a>
+              
+                <a class="tag" href="/tags/containers.html">#containers</a>
+              
+                <a class="tag" href="/tags/microservices.html">#microservices</a>
+              
+                <a class="tag" href="/tags/docker.html">#docker</a>
+              
+                <a class="tag" href="/tags/openshift.html">#openshift</a>
+              
+                <a class="tag" href="/tags/kubernetes.html">#kubernetes</a>
+              
+            </small>
+          </h4>
+
+          <section class="text-justify">
+            <p>Komodo elections are running and probably every holder is reading Notary Node candidate proposals. <link to="" github="" proposals="" />. Many operator proposals offer some kind of revenue share which they handout when they get enough votes and win. We at DragonRiders team would like to offer something different to the Komodo community. We are two IT professionals – patchkez and emmanux – who want to invest in Komodo Platform by solving every existing scaling issue and adopting innovative technologies and practices from DevOps culture. We already have a concept of how the future architecture of Notary nodes might look like. Here we try to share a few words about current Notary Nodes architecture, possible future bottlenecks and how to solve these problems.</p>
+
+<h1 id="overview-of-current-architecture">Overview of current architecture</h1>
+<p>Current Notary Nodes architecture consists of 64 physical servers located in different regions. Each server runs 3 main components – Bitcoin <link />, Komodo <link /> and Iguana <link /> services. Besides these processes, many assetchains run in parallel, with their own blockchains.  The current production setup allows communication between these services on a single machine, via “port numbers”.
+Because of all the communications happening over API (Application Programming Interface), we saw the opportunity to extend the existing functionality to communication between multiple nodes.</p>
+
+<h1 id="problem-with-scaling-komodo-platform">Problem with scaling Komodo Platform</h1>
+<p>Because of current recommended production setup, Notary Node software can run on single server only. With the increasing number of assetchains, we will come to point where you would need a supercomputer to handle a large number of assetchains.</p>
+
+<h1 id="proposed-architecture">Proposed architecture</h1>
+<p>In modern computing world, in order to allow a platform to scale, it is mandatory that each service run as an independent process and talk to other services via API. Such seggregated processes are often called “microservices” <a href="https://en.wikipedia.org/wiki/Microservices">https://en.wikipedia.org/wiki/Microservices</a>.
+With such seggregation, it is possible to place microservices on different nodes/servers where communication with other services is done through API via a “shared cluster network”. Bitcoin, Komodo and Iguana services already talk to each other via API, we only need to extend their capability so they can run on multiple nodes.
+Here is a simple architecture diagram on how scalable Komodo Platform running on top of Kubernetes/Openshift cluster might look like:</p>
+
+<p><img src="http://0.0.0.0:4000/img/new_komodo_platform4.png" alt="My helpful screenshot" /></p>
+
+<p>In order to interconnect, deploy and manage microservices (containers) we need to choose production ready platform. Kubernetes/Openshift to the rescue!</p>
+
+<h1 id="what-is-kubernetes-and-openshift">What is Kubernetes and Openshift</h1>
+<p>Kubernetes is open source platform developed by Google which allows automated deployments, container management and platform scalability. In simple words, this platform allows you to run properly designed applications on multiple nodes/servers. Openshift is a opensource container application platform built around Docker containers and Kubernetes cluster management. Openshift project provides additional services we might use while building scalable Komodo Platform.</p>
+
+<h1 id="advantages-and-benefits">Advantages and benefits</h1>
+<p>Here are some benefits of our proposed solution:</p>
+
+<ul>
+  <li>Ability to build/run the image in test environment and deploy the same image to production</li>
+  <li>Every image can be versioned (tagged)</li>
+  <li>Rolling back to previous version is also possible in production environment</li>
+  <li>High Availability – containers can be restarted on different a node in the cluster</li>
+  <li>Scalability – new cluster nodes can be added on the fly</li>
+</ul>
+
+<h1 id="testnet">Testnet</h1>
+<p>Because we want to test our nodes and configuration, and want to prove that we will be capable Notary Node operators, we are currently participating in a new Notary Node Testnet. Both of our nodes run Notary Node software in Docker containers.</p>
+
+          </section>
+
+          
+<!-- Share Buttons Start -->
+<div>
+  <ul class="rrssb-buttons clearfix">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </ul>
+</div>
+
+<!-- Share Buttons End -->
+
+
+          
+
+
+          <hr />
+
+          
+          <div class="author row">
+            <img class="col-xs-4 col-sm-3 col-md-2" src="/img/author.png" alt="Me" />
+            <p class="col-xs-8 col-sm-9 col-md-10">
+              Team of experienced engineers who would like to improve Komodo Platform.
+            </p>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Start -->
+
+<footer>
+
+    <!-- Social Buttons Start -->
+
+<ul class="list-inline social-buttons">
+    
+    
+</ul>
+
+<!-- Social Buttons End -->
+
+
+    <p><br><br></p>
+
+    <div class="container text-center">
+        <!--  <p>Copyright &copy; patchkez, emmanux 2018</p> -->
+        <p><i style="font-size: 16px;">Copyright (c) 2018, Dragon Riders</i></p>
+        
+    </div>
+</footer>
+
+<p><br><br><br><br><br><br></p>
+
+<!-- Footer End -->
+
+
+    
+<!-- Javascript Start -->
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<!--* Start Bootstrap - Grayscale Bootstrap Theme (http://startbootstrap.com)
+* Code licensed under the Apache License v2.0.
+* For details, see http://www.apache.org/licenses/LICENSE-2.0.-->
+<script>
+function toggleNavCollapse(){50<$(".navbar").offset().top?$(".navbar-fixed-top").addClass("top-nav-collapse"):$(".navbar-fixed-top").removeClass("top-nav-collapse");}
+$(document).ready(toggleNavCollapse);
+$(window).scroll(toggleNavCollapse);$(function(){$("a.page-scroll").bind("click",function(b){var a=$(this);$("html, body").stop().animate({scrollTop:$(a.attr("href")).offset().top-50},1500,"easeInOutExpo",function(){a.blur()});b.preventDefault()})});$(".navbar-collapse ul li a").click(function(){$(".navbar-toggle:visible").click()});
+</script>
+
+
+
+
+
+  <!-- Syntax highlight in post pages-->
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+
+
+  <!-- Share buttons Start -->
+
+  <script src="/js/rrssb.min.js"></script>
+
+  <!-- Share buttons End -->
+
+
+
+
+
+<script>
+function addTohistory() {
+  if (!window.location.host.startsWith("127.0.0.1")) {
+    history.pushState({}, 'Proposed Notary Node architectyre by Dragon Riders team', 'http://0.0.0.0:4000/tech/2018/03/20/proposed-notary-node-architecture.html');
+  }
+}
+</script>
+
+<!-- Gesture Navigation / Swipe Instruction Start -->
+
+
+  
+
+    <!-- Post Gesture Navigation Start -->
+
+    <script type="text/javascript" src="/js/hammer.min.js"></script>
+
+    <script>
+      var post = document.getElementById('post');
+
+      new Hammer(post).on('swipeleft', function(event) {
+        addTohistory();
+        
+          document.location.replace("/");
+        
+      });
+
+      new Hammer(post).on('swiperight', function(event) {
+        addTohistory();
+        
+          document.location.replace("/");
+        
+      });
+    </script>
+
+    <!-- Post Gesture Navigation Start -->
+
+  
+
+  
+
+  
+
+  
+
+    <!-- Swipe Instructions for Post Start -->
+
+    <script>
+      $(document).ready(function(){
+        if(!localStorage.getItem('post-swipeshowed')){
+          $("#swipe-instruction").fadeIn();
+          $("#swipe-instruction .close-swipe-instruction").click(function(){
+            $("#swipe-instruction").fadeOut();
+          });
+          localStorage.setItem('post-swipeshowed', true);
+        }
+      });
+    </script>
+
+    <!-- Swipe Instructions for Post End -->
+
+  
+
+<!-- Gesture Navigation / Swipe Instruction End -->
+
+
+
+<!-- Javascript End -->
+
+
+  </body>
+</html>
+
+<!-- Post Layout End -->

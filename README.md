@@ -8,7 +8,28 @@ alias jekyll='docker run --rm \
   --volume="$PWD/vendor/bundle:/usr/local/bundle" \
   -it jekyll/jekyll:$JEKYLL_VERSION \
   jekyll'
+
+alias jekyll_new_post='docker run --rm \
+  -p 35729:35729 -p 4000:4000 \
+  --user 1000 \
+  --volume="$PWD:/srv/jekyll" \
+  --volume="$PWD/vendor/bundle:/usr/local/bundle" \
+  -it jekyll/jekyll:$JEKYLL_VERSION'
 ```
+In second alias, replace UID 1000 with the one which is assigned to your user.
+
+## Create new blog post
+Make sure you are in the correct directory and:
+```
+jekyll_new_post ./scripts/newpost my-post
+```
+Start editing new post under ./_posts.
+Generate hashtags:
+```
+jekyll__new_post ./scripts/generate-tags
+```
+
+## Build and serve the page
 Docker jekyll image is used to build the site.
 - clone this repo and cd into this repo dir
 - ```jekyll build```
@@ -16,7 +37,6 @@ Docker jekyll image is used to build the site.
   ```jekyll serve --incremental --watch```
 
 - after every change, build new site
-- when done, push _site/* content into dragon-riders.github.io repo
 
 
 

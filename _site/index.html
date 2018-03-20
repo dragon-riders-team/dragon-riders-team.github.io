@@ -15,7 +15,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Dragon Riders - Notary Node DevOps">
-  <meta name="author" content="patchkez, komodo.rocks">
+  <meta name="author" content="patchkez, emmanux">
   <meta name="keywords" content="komodo, dragon riders, notary node, dpow, bitcoin">
   <link rel="canonical" href="/">
   <title>{ DRAGON RIDERS }</title>
@@ -131,6 +131,10 @@
             </li>
           
             <li>
+              <a class="page-scroll" href="#latest-post"> Blog </a>
+            </li>
+          
+            <li>
               <a class="page-scroll" href="#vote"> Vote </a>
             </li>
           
@@ -186,7 +190,7 @@ If you want to have a static message in your intro layout, disable the dynamic-t
     <div class="col-md-10 col-md-offset-1">
       <h2 id="about-us">About us</h2>
 
-<p>The team is composed by two Komodo Platform community members: <a href="https://github.com/Emmanux" target="_blank">komodo.rocks</a> and <a href="https://patchkez.github.io" target="_blank">patchkez</a>. We decided to form this team in order to improve Komodo platform by solving every existing scaling issue and adopting innovative technologies and practices from DevOps culture.</p>
+<p>The team is composed by two Komodo Platform community members: <a href="https://github.com/Emmanux" target="_blank">emmanux</a> (aka komodo.rocks) and <a href="https://patchkez.github.io" target="_blank">patchkez</a>. We decided to form this team in order to improve Komodo platform by solving every existing scaling issue and adopting innovative technologies and practices from DevOps culture.</p>
 
 <!-- <a href="https://www.quora.com/GitHub/What-is-the-story-behind-GitHub%E2%80%99s-octocat-mascot" target="_blank">[via]</a>.
 # 
@@ -247,7 +251,23 @@ If you want to have a static message in your intro layout, disable the dynamic-t
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
+      
+        
       
         
       
@@ -386,7 +406,23 @@ Support the repo by starring or forking it!
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
+      
+        
+      
+        
       
         
       
@@ -405,13 +441,13 @@ Support the repo by starring or forking it!
     <div class="col-md-10 col-md-offset-1">
       <h2 id="current-work">Current work</h2>
 
-<p>Dockerizing Bitcoin/Komodo/Iguana combo to make deployment frictionless.</p>
+<p>• Dockerizing Bitcoin/Komodo/Iguana combo to make deployment frictionless.</p>
 
-<p>Decoupling of Notary Node software from baremetal and deployment onto Openshift/Kubernetes.</p>
+<p>• Decoupling of Notary Node software from baremetal and deployment onto Openshift/Kubernetes.</p>
 
-<p>Having a central Docker registry with signed images.</p>
+<p>• Having a central Docker registry with signed images.</p>
 
-<p>Management scripts will need to be rewritten because they were designed to work on single machine.</p>
+<p>• Management scripts will need to be rewritten because they were designed to work on single machine.</p>
 
 <p>You can check our progress here:</p>
 
@@ -426,8 +462,8 @@ Support the repo by starring or forking it!
 <script async="" defer="" src="https://buttons.github.io/buttons.js"></script>
 
 <!-- Place this tag where you want the button to render. -->
-<p><a class="github-button" href="https://github.com/Emmanux" data-size="large" aria-label="Follow @Emmanux on GitHub">Follow komodo.rocks</a>
-<a class="github-button" href="https://github.com/patchkez" data-size="large" aria-label="Follow @patchkez on GitHub">Follow patchkez</a></p>
+<p><a class="github-button" href="https://github.com/Emmanux" data-size="large" aria-label="Follow @Emmanux on GitHub">Follow emmanux</a>
+<a class="github-button" href="https://github.com/patchkez/kmdplatform" data-size="large" aria-label="Follow @patchkez on GitHub">Follow patchkez</a></p>
 
 <p>At some point, we will merge our changes into one repo.</p>
 
@@ -528,7 +564,33 @@ Support the repo by starring or forking it!
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
       
         
       
@@ -564,17 +626,17 @@ Support the repo by starring or forking it!
   <div class="row">
     <div class="col-md-10 col-md-offset-1">
       <h2 id="pros-of-proposed-solution">Pros of proposed solution</h2>
-<p><strong>Portability Across Machines</strong> — Docker containers can be built and tested locally on dev/test server and final images can be then deployed to Notary Nodes and then started.</p>
+<p>• <strong>Portability Across Machines</strong> — Docker containers can be built and tested locally on dev/test server and final images can be then deployed to Notary Nodes and then started.</p>
 
-<p><strong>Version Control</strong></p>
+<p>• <strong>Version Control</strong></p>
 
-<p><strong>Sharing Images</strong> — operators can build an image once, share, and then everybody can deploy that same image on their own servers</p>
+<p>• <strong>Sharing Images</strong> — operators can build an image once, share, and then everybody can deploy that same image on their own servers</p>
 
-<p><strong>Minimal Overhead</strong></p>
+<p>• <strong>Minimal Overhead</strong></p>
 
-<p><strong>High Availability</strong> — in case of failure, in a multi-node setup, containers can be started on another node of the same cluster</p>
+<p>• <strong>High Availability</strong> — in case of failure, in a multi-node setup, containers can be started on another node of the same cluster</p>
 
-<p><strong>Scalability</strong> — new nodes can be added to the cluster to expand its capacity</p>
+<p>• <strong>Scalability</strong> — new nodes can be added to the cluster to expand its capacity</p>
 
 <!--
 My proposal is based around Notary nodes improvements. Currently in order to run notary node,
@@ -644,9 +706,115 @@ Support the repo by starring or forking it!
       
         
       
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+<!-- Latest Post Preview Start -->
+
+<section id="latest-post" class="container content-section text-center">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+
+        <h2 id="latest-blog-post">Latest Blog Post</h2>
+
+
+        
+        <h4> <strong> 20 Mar 2018 </strong>
+          <small>.
+            <a class="category" href="/categories/tech.html">
+              tech
+            </a>
+          .</small>
+          <strong> <a href="/tech/2018/03/20/proposed-notary-node-architecture.html">Proposed Notary Node architectyre by Dragon Riders team </a> </strong>
+          -- <small> <a href="/tech/2018/03/20/proposed-notary-node-architecture.html#disqus_thread">Comments</a></small>
+        </h4>
+
+        <section class="text-justify">
+          <p>Komodo elections are running and probably every holder is reading Notary Node candidate proposals. . Many operator proposals offer some kind of revenue share which they handout when they get enough votes and win. We at DragonRiders team would like to offer something different to the Komodo community. We are two IT professionals – patchkez and emmanux – who want to invest in Komodo Platform by solving every existing scaling issue and adopting innovative technologies and practices from DevOps culture. We already have a concept of how the future architecture of Notary nodes might look like....
+        </section>
+
+        <h4><a href="/blog/">Archive</a></h4>
+
+      </div>
+    </div>
+</section>
+
+<!-- Latest Post Preview End -->
+
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
         
       
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
       
         
       
@@ -708,7 +876,7 @@ If you prefer to vote for us individually, you can do so by visiting each member
     <p><a href="https://patchkez.github.io" target="_blank">patchkez</a></p>
   </div>
   <div class="col-sm-6">
-    <p><a href="https://komodo.rocks" target="_blank">komodo.rocks</a></p>
+    <p><a href="http://komodo.rocks" target="_blank">emmanux</a></p>
  </div>
 </div>
 
@@ -751,8 +919,6 @@ Support the repo by starring or forking it!
 
         
       
-        
-      
     
 
     <!-- Footer Start -->
@@ -772,7 +938,7 @@ Support the repo by starring or forking it!
     <p><br><br></p>
 
     <div class="container text-center">
-        <!--  <p>Copyright &copy; patchkez, komodo.rocks 2018</p> -->
+        <!--  <p>Copyright &copy; patchkez, emmanux 2018</p> -->
         <p><i style="font-size: 16px;">Copyright (c) 2018, Dragon Riders</i></p>
         
     </div>
@@ -876,7 +1042,7 @@ $(window).scroll(toggleNavCollapse);$(function(){$("a.page-scroll").bind("click"
 <script>
 function addTohistory() {
   if (!window.location.host.startsWith("127.0.0.1")) {
-    history.pushState({}, '', 'http://localhost:4000/');
+    history.pushState({}, '', 'http://0.0.0.0:4000/');
   }
 }
 </script>
