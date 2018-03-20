@@ -18,7 +18,7 @@
   <meta name="author" content="patchkez, emmanux">
   <meta name="keywords" content="komodo, dragon riders, notary node, dpow, bitcoin">
   <link rel="canonical" href="/tech/2018/03/20/proposed-notary-node-architecture.html">
-  <title>{ DRAGON RIDERS } | Proposed Notary Node architectyre by Dragon Riders team</title>
+  <title>{ DRAGON RIDERS } | Proposed Notary Node architecture by Dragon Riders team</title>
 
   <!-- Bootstrap Core CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -191,7 +191,7 @@
 <!-- Swipe Instructions End -->
 
 
-          <h1><strong>Proposed Notary Node architectyre by Dragon Riders team</strong></h1>
+          <h1><strong>Proposed Notary Node architecture by Dragon Riders team</strong></h1>
           <h4>
             <strong>20 Mar 2018</strong>
             <small>
@@ -222,17 +222,17 @@
           </h4>
 
           <section class="text-justify">
-            <p>Komodo elections are running and probably every holder is reading Notary Node candidate proposals. <link to="" github="" proposals="" />. Many operator proposals offer some kind of revenue share which they handout when they get enough votes and win. We at DragonRiders team would like to offer something different to the Komodo community. We are two IT professionals – patchkez and emmanux – who want to invest in Komodo Platform by solving every existing scaling issue and adopting innovative technologies and practices from DevOps culture. We already have a concept of how the future architecture of Notary nodes might look like. Here we try to share a few words about current Notary Nodes architecture, possible future bottlenecks and how to solve these problems.</p>
+            <p>Komodo elections are in progress and probably every holder is reading Notary Node candidate <a href="https://github.com/KomodoPlatform/vote2018" target="_blank">proposals</a>. Many proposals offer some kind of revenue share which they handout when they get enough votes and win. We at DragonRiders team would like to offer something different to the Komodo community. We are two IT professionals – <a href="https://patchkez.github.io" target="_blank">patchkez</a>  and <a href="https://github.com/Emmanux" target="_blank">emmanux</a>  – who want to invest in Komodo Platform by solving every existing scaling issue and adopting innovative technologies and practices from DevOps culture. We already have a concept of how the future architecture of Notary nodes might look like. Here we try to share a few words about current Notary Nodes architecture, possible future bottlenecks and how to solve these problems.</p>
 
-<h1 id="overview-of-current-architecture">Overview of current architecture</h1>
-<p>Current Notary Nodes architecture consists of 64 physical servers located in different regions. Each server runs 3 main components – Bitcoin <link />, Komodo <link /> and Iguana <link /> services. Besides these processes, many assetchains run in parallel, with their own blockchains.  The current production setup allows communication between these services on a single machine, via “port numbers”.
-Because of all the communications happening over API (Application Programming Interface), we saw the opportunity to extend the existing functionality to communication between multiple nodes.</p>
+<h2 id="overview-of-current-architecture">Overview of current architecture</h2>
+<p>Current Notary Nodes architecture consists of 64 physical servers located in different regions. Each server runs 3 main components – <a href="https://bitcoin.org/en/bitcoin-core/" target="_blank">Bitcoin Core</a>, <a href="https://github.com/jl777/komodo" target="_blank">Komodod</a> and <a href="https://github.com/jl777/SuperNET" target="_blank">Iguana</a> services. Besides these processes, many assetchains run in parallel, with their own blockchains.  The current production setup allows communication between these services on a single machine, via “port numbers”.
+Because of all the communications is happening over API (Application Programming Interface), we saw the opportunity to extend the existing functionality to communication between multiple nodes.</p>
 
-<h1 id="problem-with-scaling-komodo-platform">Problem with scaling Komodo Platform</h1>
+<h2 id="problem-with-scaling-komodo-platform">Problem with scaling Komodo Platform</h2>
 <p>Because of current recommended production setup, Notary Node software can run on single server only. With the increasing number of assetchains, we will come to point where you would need a supercomputer to handle a large number of assetchains.</p>
 
-<h1 id="proposed-architecture">Proposed architecture</h1>
-<p>In modern computing world, in order to allow a platform to scale, it is mandatory that each service run as an independent process and talk to other services via API. Such seggregated processes are often called “microservices” <a href="https://en.wikipedia.org/wiki/Microservices">https://en.wikipedia.org/wiki/Microservices</a>.
+<h2 id="proposed-architecture">Proposed architecture</h2>
+<p>In modern computing world, in order to allow a platform to scale, it is mandatory that each service run as an independent process and talk to other services via API. Such seggregated processes are often called <a href="https://en.wikipedia.org/wiki/Microservices" target="_blank">microservices</a>.
 With such seggregation, it is possible to place microservices on different nodes/servers where communication with other services is done through API via a “shared cluster network”. Bitcoin, Komodo and Iguana services already talk to each other via API, we only need to extend their capability so they can run on multiple nodes.
 Here is a simple architecture diagram on how scalable Komodo Platform running on top of Kubernetes/Openshift cluster might look like:</p>
 
@@ -240,10 +240,10 @@ Here is a simple architecture diagram on how scalable Komodo Platform running on
 
 <p>In order to interconnect, deploy and manage microservices (containers) we need to choose production ready platform. Kubernetes/Openshift to the rescue!</p>
 
-<h1 id="what-is-kubernetes-and-openshift">What is Kubernetes and Openshift</h1>
-<p>Kubernetes is open source platform developed by Google which allows automated deployments, container management and platform scalability. In simple words, this platform allows you to run properly designed applications on multiple nodes/servers. Openshift is a opensource container application platform built around Docker containers and Kubernetes cluster management. Openshift project provides additional services we might use while building scalable Komodo Platform.</p>
+<h2 id="what-is-kubernetes-and-openshift">What is Kubernetes and Openshift</h2>
+<p><a href="https://kubernetes.io" target="_blank">Kubernetes</a> is open source platform developed by Google which allows automated deployments, container management and platform scalability. In simple words, this platform allows you to run properly designed applications on multiple nodes/servers. <a href="https://www.openshift.org" target="_blank">Openshift</a> is a opensource container application platform built around Docker containers and Kubernetes cluster management. Openshift project provides additional services we might use while building scalable Komodo Platform.</p>
 
-<h1 id="advantages-and-benefits">Advantages and benefits</h1>
+<h2 id="advantages-and-benefits">Advantages and benefits</h2>
 <p>Here are some benefits of our proposed solution:</p>
 
 <ul>
@@ -254,7 +254,7 @@ Here is a simple architecture diagram on how scalable Komodo Platform running on
   <li>Scalability – new cluster nodes can be added on the fly</li>
 </ul>
 
-<h1 id="testnet">Testnet</h1>
+<h2 id="testnet-participation">Testnet participation</h2>
 <p>Because we want to test our nodes and configuration, and want to prove that we will be capable Notary Node operators, we are currently participating in a new Notary Node Testnet. Both of our nodes run Notary Node software in Docker containers.</p>
 
           </section>
@@ -284,13 +284,6 @@ Here is a simple architecture diagram on how scalable Komodo Platform running on
 
           <hr />
 
-          
-          <div class="author row">
-            <img class="col-xs-4 col-sm-3 col-md-2" src="/img/author.png" alt="Me" />
-            <p class="col-xs-8 col-sm-9 col-md-10">
-              Team of experienced engineers who would like to improve Komodo Platform.
-            </p>
-          </div>
           
         </div>
       </div>
@@ -376,7 +369,7 @@ $(window).scroll(toggleNavCollapse);$(function(){$("a.page-scroll").bind("click"
 <script>
 function addTohistory() {
   if (!window.location.host.startsWith("127.0.0.1")) {
-    history.pushState({}, 'Proposed Notary Node architectyre by Dragon Riders team', 'http://0.0.0.0:4000/tech/2018/03/20/proposed-notary-node-architecture.html');
+    history.pushState({}, 'Proposed Notary Node architecture by Dragon Riders team', 'http://0.0.0.0:4000/tech/2018/03/20/proposed-notary-node-architecture.html');
   }
 }
 </script>

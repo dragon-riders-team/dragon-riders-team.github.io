@@ -163,7 +163,7 @@ timeline-img: "/img/timeline/default.png"
 # This works best when your author blurb image has a transparent background, or matches your site background color.
 
 # if the author_blurb is not set, then this feature is skipped
-author_blurb: "Team of experienced engineers who would like to improve Komodo Platform."
+# author_blurb: "Team of experienced engineers who would like to improve Komodo Platform."
 author_blurb_image: "/img/author.png"
 
 ##################
