@@ -27,7 +27,7 @@
   
     
       <url>
-        <loc>http://0.0.0.0:4000/</loc>
+        <loc>http://0.0.0.0:4000/blog/</loc>
         
           
           
@@ -40,7 +40,7 @@
   
     
       <url>
-        <loc>http://0.0.0.0:4000/blog/</loc>
+        <loc>http://0.0.0.0:4000/</loc>
         
           
           
