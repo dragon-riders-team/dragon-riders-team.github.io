@@ -212,9 +212,9 @@ pages_list:
   Solution: 'pros_solution'
   # Hardware: 'hardware'
   Blog: 'latest-post'
-#  Timeline: 'timeline'
-  Vote: 'vote'
-  # Contact: 'contact'
+  # Timeline: 'timeline'
+  # Vote: 'vote'
+  Contact: 'contact'
   # Test: 'test'
 
 # Exclusion list from the generated _site
